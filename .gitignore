@@ -1,0 +1,17 @@
+apptienda/node_modules/
+apptienda/.expo/
+apptienda/dist/
+apptienda/npm-debug.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+apptienda/web-build/
+
+# macOS
+apptienda/.DS_Store
+
+# Temporary files created by Metro to check the health of the file watcher
+apptienda/.metro-health-check*
