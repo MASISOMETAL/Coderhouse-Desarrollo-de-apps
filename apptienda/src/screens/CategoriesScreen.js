@@ -1,12 +1,12 @@
-import { Button, StyleSheet, Text, View } from 'react-native'
+import { Button, StyleSheet, Text, View } from 'react-native';
 
-const CategoriesScreen = () => {
-    return (
-      <View style={styles.container}>
-        <Text>CategoriesScreen</Text>
-        <Button title='Ir a Productos' />
-      </View>
-    )
+const CategoriesScreen = ({ navigation }) => {
+  return (
+    <View style={styles.container}>
+      <Text>CategoriesScreen</Text>
+      <Button title='Ir a Productos' onPress={() => navigation.navigate("Bread")} />
+    </View>
+  )
 }
 
 const styles = StyleSheet.create({
@@ -19,4 +19,4 @@ const styles = StyleSheet.create({
 });
 
 
-export default CategoriesScreen
+export default CategoriesScreen;

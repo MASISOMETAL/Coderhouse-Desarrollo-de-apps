@@ -1,10 +1,7 @@
-import * as SplashScreen from 'expo-splash-screen'
-
-import { OpenSans_400Regular, OpenSans_700Bold, useFonts } from '@expo-google-fonts/open-sans'
-
-import ShopNavigator from './src/navigation/ShopNavigator.js'
-import { StyleSheet } from 'react-native';
 import { useEffect } from 'react';
+import * as SplashScreen from 'expo-splash-screen'
+import { OpenSans_400Regular, OpenSans_700Bold, useFonts } from '@expo-google-fonts/open-sans'
+import ShopNavigator from './src/navigation/ShopNavigator.js'
 
 SplashScreen.preventAutoHideAsync()
 
@@ -30,11 +27,3 @@ export default function App() {
   )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

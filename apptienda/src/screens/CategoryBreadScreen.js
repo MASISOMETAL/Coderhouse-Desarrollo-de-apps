@@ -1,12 +1,12 @@
-import { Button, StyleSheet, Text, View } from 'react-native'
+import { Button, StyleSheet, Text, View } from 'react-native';
 
-const CategoryBreadScreen = ({navigation}) => {
-    return (
-      <View style={styles.container} >
-        <Text>CategoryBreadScreen</Text>
-        <Button title='Ir al detalle' onPress={navigation.navigate('Bread')} />
-      </View>
-    )
+const CategoryBreadScreen = ({ navigation }) => {
+  return (
+    <View style={styles.container} >
+      <Text>CategoryBreadScreen</Text>
+      <Button title='Ir al detalle' onPress={() => navigation.navigate('Detail')} />
+    </View>
+  )
 }
 
 const styles = StyleSheet.create({
@@ -19,4 +19,4 @@ const styles = StyleSheet.create({
 });
 
 
-export default CategoryBreadScreen
+export default CategoryBreadScreen;

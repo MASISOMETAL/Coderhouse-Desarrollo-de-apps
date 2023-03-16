@@ -1,11 +1,11 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native';
 
 const BreadDetailScreen = () => {
-    return (
-      <View style={styles.container}>
-        <Text>BreadDetailScreen</Text>
-      </View>
-    )
+  return (
+    <View style={styles.container}>
+      <Text>BreadDetailScreen</Text>
+    </View>
+  )
 }
 
 const styles = StyleSheet.create({
@@ -18,4 +18,4 @@ const styles = StyleSheet.create({
 });
 
 
-export default BreadDetailScreen
+export default BreadDetailScreen;
