@@ -1,12 +1,30 @@
-import { Button, StyleSheet, Text, View } from 'react-native';
+import { Button, FlatList, StyleSheet, Text, View } from 'react-native'
 
-const CategoryBreadScreen = ({ navigation }) => {
-  return (
-    <View style={styles.container} >
-      <Text>CategoryBreadScreen</Text>
-      <Button title='Ir al detalle' onPress={() => navigation.navigate('Detail')} />
-    </View>
-  )
+import {BREADS} from '../data/breads.js'
+import BreadItem from '../components/BreadItem'
+
+const CategoryBreadScreen = ({navigation , route}) => {
+
+  const breads = BREADS.filter(bread => bread.category === route.params.categoryID )
+
+  const handleSelected = (item) => {
+    navigation.navigate('Detail', {
+      productID: item.id,
+      name: item.name
+    })
+  }
+
+  const renderItemBread = ({item}) => (
+    <BreadItem item={item} onSelected={handleSelected} />
+)
+
+    return (
+      <FlatList 
+        data={breads}
+        keyExtractor={item=>item.id}
+        renderItem={renderItemBread}
+      />
+    )
 }
 
 const styles = StyleSheet.create({
@@ -19,4 +37,4 @@ const styles = StyleSheet.create({
 });
 
 
-export default CategoryBreadScreen;
+export default CategoryBreadScreen

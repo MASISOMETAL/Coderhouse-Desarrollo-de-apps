@@ -1,11 +1,15 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native'
 
-const BreadDetailScreen = () => {
-  return (
-    <View style={styles.container}>
-      <Text>BreadDetailScreen</Text>
-    </View>
-  )
+const BreadDetailScreen = ({route}) => {
+  const bread = route.params.bread
+    return (
+      <View style={styles.container}>
+        <Text style={styles.title} > {bread.name} </Text>
+        <Text>{bread.description}</Text>
+        <Text>{bread.price}</Text>
+        <Text>{bread.weight}</Text>
+      </View>
+    )
 }
 
 const styles = StyleSheet.create({
@@ -18,4 +22,4 @@ const styles = StyleSheet.create({
 });
 
 
-export default BreadDetailScreen;
+export default BreadDetailScreen
