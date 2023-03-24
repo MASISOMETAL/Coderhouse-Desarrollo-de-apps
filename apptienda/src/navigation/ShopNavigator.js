@@ -1,5 +1,5 @@
 import BreadDetailScreen from '../screens/BreadDetailScreen'
-import {COLORS} from '../constants/colors'
+import { COLORS } from '../constants/colors'
 import CategoriesScreen from '../screens/CategoriesScreen'
 import CategoryBreadScreen from "../screens/CategoryBreadScreen"
 import { NavigationContainer } from "@react-navigation/native"
@@ -10,16 +10,16 @@ const Stack = createNativeStackNavigator()
 
 
 const ShopNavigator = () => {
-    return(
+    return (
         <Stack.Navigator
             initialRouteName='Home'
             screenOptions={{
-                headerStyle:{
+                headerStyle: {
                     backgroundColor: Platform.OS === 'android' ? COLORS.primary : '',
                 },
                 headerTintColor: Platform.OS === 'android' ? 'white' : COLORS.primary,
                 headerTitleStyle: {
-                    fontWeight:'bold',
+                    fontWeight: 'bold',
                 }
             }}
         >
@@ -27,23 +27,23 @@ const ShopNavigator = () => {
                 name='Home'
                 component={CategoriesScreen}
                 options={{
-                    title:'Mi Pan'
+                    title: 'Mi Pan'
                 }}
-                />
+            />
             <Stack.Screen
                 name='Products'
                 component={CategoryBreadScreen}
                 options={({ route }) => ({
                     title: route.params.name
                 })}
-                 />
+            />
             <Stack.Screen
                 name='Detail'
                 component={BreadDetailScreen}
-                options={ ({ route }) => ({
-                    title: route.params.productID
+                options={({ route }) => ({
+                    title: route.params.name
                 })}
-                />
+            />
         </Stack.Navigator>
     )
 }

@@ -5,12 +5,12 @@ import React from 'react'
 
 const OrderScreen = () => {
 
-    const renderCardItem = (itemData) => (
-        <OrderItem
-            item={itemData.item}
-            onDelete={onHandlerDeleteItem}
-        />
-    )
+  const renderCardItem = (itemData) => (
+    <OrderItem
+      item={itemData.item}
+      onDelete={onHandlerDeleteItem}
+    />
+  )
 
   return (
     <View style={styles.container}>

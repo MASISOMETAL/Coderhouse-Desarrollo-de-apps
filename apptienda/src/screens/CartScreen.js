@@ -9,16 +9,16 @@ const CartScreen = () => {
   const total = 12000
 
   const handlerConfirmCart = () => console.log('Confirmar carrito')
-  const handleDeleteItem = () => console.log('Eliminar demasiado') 
+  const handleDeleteItem = () => console.log('Eliminar demasiado')
 
   const renderItem = (data) => {
-    <CartItem  item={data.item} />
+    <CartItem item={data.item} />
   }
 
   return (
     <View style={styles.container}>
       <View style={styles.list}>
-        <FlatList  
+        <FlatList
           data={items}
           keyExtractor={item => item.id}
           renderItem={renderItem}

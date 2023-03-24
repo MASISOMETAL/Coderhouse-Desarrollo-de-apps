@@ -1,8 +1,8 @@
-import {CATEGORIES} from '../data/categories'
+import { CATEGORIES } from '../data/categories'
 import { FlatList } from 'react-native'
 import GridItem from '../components/GridItem'
 
-const CategoriesScreen = ({navigation}) => {
+const CategoriesScreen = ({ navigation }) => {
 
   const handleSelectedCategory = (item) => {
     navigation.navigate('Products', {
@@ -11,18 +11,18 @@ const CategoriesScreen = ({navigation}) => {
     })
   }
 
-  const renderGridItem = ({item}) => (
+  const renderGridItem = ({ item }) => (
     <GridItem item={item} onSelected={handleSelectedCategory} />
   )
 
-    return (
-      <FlatList
-        data={CATEGORIES}
-        keyExtractor={item => item.id}
-        renderItem={renderGridItem}
-        numColumns={2}
-      />
-    )
+  return (
+    <FlatList
+      data={CATEGORIES}
+      keyExtractor={item => item.id}
+      renderItem={renderGridItem}
+      numColumns={2}
+    />
+  )
 }
 
 export default CategoriesScreen
